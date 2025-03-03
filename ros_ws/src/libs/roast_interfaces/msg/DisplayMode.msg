@@ -1,0 +1,9 @@
+uint8 display_mode
+
+uint8 MODE_BLINK = 0
+uint8 MODE_BLINK_THRICE = 1
+uint8 MODE_PATROL = 2
+uint8 MODE_BOOTUP = 3
+uint8 MODE_THREAT_TRACKING_ON = 4
+uint8 MODE_THREAT_TRACKING_OFF = 5
+uint8 MODE_CUSTOM = 6

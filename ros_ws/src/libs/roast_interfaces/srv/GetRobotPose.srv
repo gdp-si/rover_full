@@ -1,0 +1,5 @@
+# Get the robot pose in the map frame
+
+bool get_current_pose
+---
+geometry_msgs/PoseStamped robot_pose

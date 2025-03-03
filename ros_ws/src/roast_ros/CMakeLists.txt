@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.8)
+project(roast_ros)
+find_package(ament_cmake REQUIRED)
+find_package(ament_cmake_python REQUIRED)
+ament_package()

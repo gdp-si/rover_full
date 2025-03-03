@@ -1,0 +1,15 @@
+# Action definition to send a message to the command center
+# TODO: Update Signature to access the command center
+builtin_interfaces/Time stamp
+string message
+uint8 message_level
+
+uint8 MESSAGE_LEVEL_DEBUG = 0
+uint8 MESSAGE_LEVEL_INFO = 1
+uint8 MESSAGE_LEVEL_WARNING = 2
+uint8 MESSAGE_LEVEL_ERROR = 3
+uint8 MESSAGE_LEVEL_FATAL = 4
+---
+bool success
+---
+string error

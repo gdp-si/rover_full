@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<root>
+    <BehaviorTree ID="DisplayModeTestBed">
+        <Sequence name="DisplayActivationChecker">
+            <Action ID="DisplayMode" display_mode="blink" />
+            <Action ID="WaitAction" wait_duration="3.0" />
+
+            <Action ID="DisplayMode" display_mode="patrol" />
+            <Action ID="WaitAction" wait_duration="3.0" />
+
+            <Action ID="DisplayMode" display_mode="threat_tracking_on" />
+            <Action ID="WaitAction" wait_duration="3.0" />
+
+            <Action ID="DisplayMode" display_mode="threat_tracking_off" />
+            <Action ID="WaitAction" wait_duration="3.0" />
+        </Sequence>
+    </BehaviorTree>
+</root>

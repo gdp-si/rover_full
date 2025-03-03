@@ -1,0 +1,15 @@
+[Unit]
+Description=Roast Launch Service. Launches the sensors and navigaiton system.
+
+[Service]
+Environment=ROS_ROOT=/opt/ros/humble
+Environment=ROS_PACKAGE_PATH=$ROS_ROOT/share
+Environment=ROBOT_TYPE=10-inch
+Environment=ROS_IP=192.168.2.105
+Environment=ROS_HOST_NAME=192.168.2.105
+Environment=ROS_DOMAIN_ID=5
+Environment=ROS_DISCOVERY_SERVER=192.168.2.105:11811
+ExecStart=${ROS_ROOT}/bin/ros2 launch roast_bringup robot_bringup.launch.py
+
+[Install]
+WantedBy=multi-user.target

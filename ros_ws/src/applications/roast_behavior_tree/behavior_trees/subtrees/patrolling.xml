@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<root main_tree_to_execute="PatrollingSubTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="PatrollingSubTree">
+        <Sequence name="Patrolling">
+            <Action ID="DeleteHistoryService" expiry_days="7" type="0"/>
+            <Action ID="ActivateLedService" led_mode="navigation_started" />
+            <Action ID="SpeakerAnnouncement" message="patrol" frequency="1" />
+            <!-- <Action ID="DisplayMode" display_mode="patrol" /> -->
+            <Action ID="ClearEntireLocalCostmap"/>
+            <Action ID="PatrolAction" patrol_type="sequential"/>
+            <Action ID="SpinAction" spin_angle="3.14"/>
+        </Sequence>
+    </BehaviorTree>
+</root>

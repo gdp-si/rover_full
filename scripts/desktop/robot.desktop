@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Roast
+Exec=/usr/bin/python3 {{ EXECUTABLE_PATH }}/start.py
+Icon={{ EXECUTABLE_PATH }}/logo.png
+Terminal=true
+Type=Application
+Categories=Utility;

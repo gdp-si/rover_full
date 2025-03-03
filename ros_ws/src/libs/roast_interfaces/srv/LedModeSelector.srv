@@ -1,0 +1,4 @@
+uint8 led_timeout
+roast_interfaces/LedMode led_mode
+---
+bool success

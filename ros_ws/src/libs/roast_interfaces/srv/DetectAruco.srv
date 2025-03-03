@@ -1,0 +1,4 @@
+uint8 timeout # Timeout in seconds
+string image_topic # Image topic to subscribe to
+---
+bool success # True if the marker was successfully detected

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!-- BT nodes developed with the roast behavior tree package -->
+<root>
+    <TreeNodesModel>
+        <Action ID="GoToHome">
+            <input_port name="backup_distance">Distance to backup</input_port>
+            <input_port name="spin_angle">Spin angle in radians</input_port>
+        </Action>
+        <Action ID="SendCommandCenterMessage">
+            <input_port name="message">Message to send</input_port>
+            <input_port name="level">Message Severity Level</input_port>
+        </Action>
+        <Action ID="MoveForward">
+            <input_port name="distance">Distance to move forward</input_port>
+            <input_port name="speed">Speed to move forward</input_port>
+        </Action>
+        <Action ID="PatrolAction">
+            <input_port name="patrol_type">Patrol Type (inlowercases): sequential or random</input_port>
+        </Action>
+        <Action ID="TrackThreat">
+            <input_port name="turn_to_threat">Assertion to turn to threat: true or false</input_port>
+        </Action>
+        <Action ID="ThreatMitigationService">
+            <input_port name="spray_duration">Spray duration for the threat mitigation module</input_port>
+            <input_port name="service_name">Service name</input_port>
+        </Action>
+        <Action ID="SendSmsMessage">
+            <input_port name="level">Level of the message (INFO, WARN, ERROR)</input_port>
+            <input_port name="message">Message to send SMS</input_port>
+            <input_port name="frequency">SMS frequency</input_port>
+        </Action>
+        <Action ID="SpeakerAnnouncement">
+            <input_port name="level">Level of the message (INFO, WARN, ERROR)</input_port>
+            <input_port name="message">Message for speaker announcement</input_port>
+            <input_port name="frequency">Speaker frequency</input_port>
+        </Action>
+        <Action ID="ActivateLedService">
+            <input_port name="led_mode">Choose between different mode of development: default, booted_up, navigation_started, restart, threat, battery_low</input_port>
+            <input_port name="service_name">Service name</input_port>
+        </Action>
+
+        <!-- Cancel Action Nodes -->
+        <Action ID="CancelPatrolAction" />
+        <Action ID="CancelTrackThreat" />
+
+        <!-- Condition Nodes -->
+        <Condition ID="IsThreatDetected" />
+        <Condition ID="SensorStatus" />
+        <Condition ID="IsArucoDetected">
+            <input_port name="image_topic">Image topic</input_port>
+            <input_port name="timeout">Timeout</input_port>
+        </Condition>
+
+    </TreeNodesModel>
+</root>

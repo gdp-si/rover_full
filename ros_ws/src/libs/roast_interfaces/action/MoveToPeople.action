@@ -1,0 +1,8 @@
+bool move_to_group
+bool turn_to_group
+uint8 topic_timeout
+---
+bool success
+---
+geometry_msgs/PoseStamped current_pose
+bool is_group_detected

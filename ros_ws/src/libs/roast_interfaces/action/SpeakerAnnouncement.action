@@ -1,0 +1,15 @@
+# Action definition for the speaker announcement
+builtin_interfaces/Time stamp
+string message
+uint8 message_level
+uint8 frequency
+
+uint8 MESSAGE_LEVEL_DEBUG = 0
+uint8 MESSAGE_LEVEL_INFO = 1
+uint8 MESSAGE_LEVEL_WARNING = 2
+uint8 MESSAGE_LEVEL_ERROR = 3
+uint8 MESSAGE_LEVEL_FATAL = 4
+---
+bool success
+---
+string status

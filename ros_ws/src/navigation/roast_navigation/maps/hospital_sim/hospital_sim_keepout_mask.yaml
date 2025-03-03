@@ -1,0 +1,7 @@
+image: hospital_sim_keepout_mask.pgm
+mode: trinary
+resolution: 0.05
+origin: [-13.6, -35.2, 0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.25

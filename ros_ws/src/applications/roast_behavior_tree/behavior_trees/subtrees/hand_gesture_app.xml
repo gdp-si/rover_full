@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<root>
+    <BehaviorTree ID="HandGestureSubTree">
+        <Sequence name="HandGestureRecognition">
+            <Condition ID="IsGroupDetected"/>
+            <Sequence>
+                <Action ID="ClearEntireLocalCostmap"/>
+                <Action ID="MoveToPeopleGroup" group_orientation="{group_orientation}" topic_timeout="3.0" turn_to_group="false"/>
+                <Action ID="CancelMoveToPeopleGroup"/>
+                <Action ID="SpinAction" spin_angle="{group_orientation}"/>
+            </Sequence>
+            <Sequence>
+                <Sequence name="WelcomeGroupAndWaitForHiGesture">
+                    <Action ID="ActivateLedService" led_mode="navigation_started" />
+                    <Action ID="SpeakerAnnouncement" message="request-gesture" frequency="1" />
+                    <Action ID="WaitAction" wait_duration="12.0" />
+                    <Action ID="WaitForHandGesture" timeout="5.0" gesture="hi" />
+                </Sequence>
+                <Sequence name="TakePhoto">
+                    <Action ID="SpeakerAnnouncement" message="gesture-recognized" frequency="1" />
+                    <Action ID="WaitAction" wait_duration="6" />
+                    <Action ID="CaptureCamera" image_topic="/front_oakd_camera/rgb" timeout="" />
+                </Sequence>
+                <Sequence name="ShowPicture">
+                    <Action ID="SpeakerAnnouncement" message="show-picture" frequency="1" />
+                    <Action ID="DisplayPhoto" time_interval="5.0" />
+                    <Action ID="WaitAction" wait_duration="5.0" />
+                </Sequence>
+                <Action ID="SpeakerAnnouncement" message="bye-note" frequency="1" />
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+</root>

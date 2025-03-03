@@ -1,0 +1,8 @@
+# Services adapted from original post ros2_jetson_stats
+# link: https://github.com/NVIDIA-AI-IOT/ros2_jetson_stats
+
+# jetson_clocks selection
+
+bool status
+---
+bool done

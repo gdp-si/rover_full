@@ -1,0 +1,19 @@
+# Action definition for Patrolling applicaiton
+bool start_patrol
+string behavior_tree # "patrol_random.xml" or "patrol_sequential.xml"
+uint8 patrol_type # "random" or "sequential"
+uint8 patrol_mode # 0: patrol_without_pause, 1: patrol_with_pause
+
+# Patrol Mode
+uint8 PATROL_WITHOUT_PAUSE=0
+uint8 PATROL_WITH_PAUSE=1
+
+# Patrol Type
+uint8 PATROL_RANDOM=0
+uint8 PATROL_SEQUENTIAL=1
+
+---
+bool success
+---
+geometry_msgs/PoseStamped current_pose
+bool is_patrolling

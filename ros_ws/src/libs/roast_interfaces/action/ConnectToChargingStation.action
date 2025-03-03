@@ -1,0 +1,12 @@
+#Get the desired battery state to connect to charging station
+
+sensor_msgs/BatteryState desired_battery_state
+---
+# Final Battery State
+
+bool charging_station_connected
+sensor_msgs/BatteryState final_battery_state
+---
+# Current Battery State of the robot
+
+sensor_msgs/BatteryState current_battery_state

@@ -1,0 +1,6 @@
+std_msgs/Float32 distance
+std_msgs/Float32 speed
+---
+bool success
+---
+geometry_msgs/PoseStamped current_pose

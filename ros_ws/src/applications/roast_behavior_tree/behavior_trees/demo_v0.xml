@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<root main_tree_to_execute="MainTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="MainTree">
+        <Sequence>
+            <Fallback>
+                <Inverter>
+                    <Fallback>
+                        <Condition ID="IsBatteryLow" battery_topic="/battery" is_voltage="12.0" min_battery="50.0"/>
+                        <!-- TODO: Uncomment the below condition -->
+                        <!-- <Condition ID="IsArucoDetected" image_topic="/back_oakd_camera/rgb" timeout="5"/> -->
+                    </Fallback>
+                </Inverter>
+                <Action ID="GoToHome" backup_distance="1.0" spin_angle="0.8"/>
+            </Fallback>
+            <Control ID="RoundRobin">
+                <ReactiveSequence>
+                    <Condition ID="IsThreatDetected"/>
+                    <Sequence>
+                        <Action ID="CancelPatrolAction"/>
+                        <Action ID="TrackThreat" turn_to_threat="false"/>
+                    </Sequence>
+                </ReactiveSequence>
+                <ReactiveFallback>
+                    <Condition ID="IsThreatDetected"/>
+                    <Sequence>
+                        <!-- <Action ID="CancelTrackThreat"/> -->
+                        <Sequence>
+                            <Action ID="WaitAction" wait_duration="3"/>
+                            <!-- <Action ID="Spin" spin_angle="3.14"/> -->
+                        </Sequence>
+                        <Sequence>
+                            <Action ID="PatrolAction" patrol_type="sequential"/>
+                            <Action ID="SpinAction" spin_angle="3.14"/>
+                        </Sequence>
+                    </Sequence>
+                </ReactiveFallback>
+            </Control>
+        </Sequence>
+    </BehaviorTree>
+</root>

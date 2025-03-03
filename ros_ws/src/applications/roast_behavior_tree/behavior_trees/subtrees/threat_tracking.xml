@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<root>
+    <BehaviorTree ID="ThreatTrackingSubTree">
+        <Sequence name="ThreatTracking">
+            <Condition ID="IsThreatDetected"/>
+            <Sequence>
+                <Action ID="SpeakerAnnouncement" message="threat-track" frequency="1" />
+                <Action ID="ActivateLedService" led_mode="threat" />
+                <!-- <Action ID="DisplayMode" display_mode="threat_tracking_on" /> -->
+                <SetBlackboard output_key="threat_detected" value="true"/>
+                <Action ID="ClearEntireLocalCostmap"/>
+                <ReactiveFallback>
+                    <Condition ID="IsNearThreat"/>
+                    <Action ID="TrackThreat" threat_orientation="{threat_spin_angle}" topic_timeout="3.0" turn_to_threat="false"/>
+                </ReactiveFallback>
+                <Action ID="CancelTrackThreat"/>
+                <Action ID="SpinAction" spin_angle="{threat_spin_angle}"/>
+                <Action ID="SpeakerAnnouncement" message="warn-threat" frequency="1" />
+            </Sequence>
+        </Sequence>
+    </BehaviorTree>
+</root>

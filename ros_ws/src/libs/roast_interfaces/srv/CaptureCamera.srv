@@ -1,0 +1,8 @@
+bool capture_photo
+bool capture_video
+string save_path # if empty, use default
+string image_topic # if empty, use default
+uint8 timeout # seconds
+---
+bool success
+sensor_msgs/Image image

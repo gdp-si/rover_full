@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<root>
+    <BehaviorTree ID="ActivateLedTestBed">
+        <Sequence name="LedActivationChecker">
+            <Action ID="ActivateLedService" led_mode="navigation_started" />
+            <Action ID="WaitAction" wait_duration="3.0" />
+
+            <Action ID="ActivateLedService" led_mode="threat" />
+            <Action ID="WaitAction" wait_duration="3.0" />
+
+            <Action ID="ActivateLedService" led_mode="navigation_stop" />
+            <Action ID="WaitAction" wait_duration="3.0" />
+
+            <Action ID="ActivateLedService" led_mode="battery_low" />
+            <Action ID="WaitAction" wait_duration="3.0" />
+
+
+            <Action ID="ActivateLedService" led_mode="battery_critical" />
+            <Action ID="WaitAction" wait_duration="3.0" />
+        </Sequence>
+    </BehaviorTree>
+</root>

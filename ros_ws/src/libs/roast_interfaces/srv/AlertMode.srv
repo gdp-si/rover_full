@@ -1,0 +1,7 @@
+# Mode of Alert (sms, speaker)
+
+bool sms
+bool speaker
+string message
+---
+bool status

@@ -1,0 +1,14 @@
+{
+  "patrol_id": "1",
+  "patrol_name": "demo",
+  "patrol_points": [
+    [
+      0,
+      0
+    ],
+    [
+      10,
+      0
+    ]
+  ]
+}

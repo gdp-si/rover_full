@@ -1,0 +1,32 @@
+ground_plane_segmentation_node:
+  ros__parameters:
+    filter_field_name: z
+    min_limit: -0.5
+    max_limit: 1.5
+    invert: false # true to only send the ground plane
+    use_sim_time: false
+
+robot_footprint_filter_node:
+  ros__parameters:
+    invert: true # true to send everything but the robot footprint
+    max_x: 0.5
+    max_y: 0.4
+    max_z: 1.0
+    min_x: -0.5
+    min_y: -0.4
+    min_z: -1.0
+
+radius_filter_node:
+  ros__parameters:
+    invert: true # true to send everything but the robot footprint
+    max_x: 0.2
+    max_y: 50.0
+    max_z: 1.0
+    min_x: -0.2
+    min_y: -50.0
+    min_z: -1.0
+
+voxel_grid_filter_node:
+  ros__parameters:
+    # Higher the value, sparse the point cloud
+    leaf_size: 0.1

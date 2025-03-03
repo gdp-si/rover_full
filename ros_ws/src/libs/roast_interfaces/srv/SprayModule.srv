@@ -1,0 +1,7 @@
+# Activate spray misting system
+bool start_spray
+float32 spray_duration
+float32 spray_interval
+float32 spray_angle
+---
+bool success

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<root>
+    <BehaviorTree ID="ConditionsCheckerSubTree">
+        <Sequence name="ConditionsChecker">
+            <SetBlackboard output_key="gesture" value="0"/>
+            <!-- <Condition ID="AreSensorsReady" master_lifecycle_node="roast_nav2_lifecycle_manager" />
+            <Condition ID="IsThreatDetected" />
+            <Condition ID="IsArucoDetected" image_topic="/back_oakd_camera/mono_left" timeout="5" /> -->
+            <Condition ID="IsBatteryLow" min_battery="20" is_voltage="18.0" />
+            <Condition ID="IsHandGestureDetected" gesture="{gesture}" />
+            <Condition ID="IsGroupDetected" />
+        </Sequence>
+    </BehaviorTree>
+</root>

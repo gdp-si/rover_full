@@ -1,0 +1,100 @@
+echo "Loading better functions for connecting to robots"
+
+function print_information {
+
+    function print_color {
+        tput setaf "$1"
+        echo "$2"
+        tput sgr0
+    }
+
+    function print_info {
+        print_color 2 "$1"
+    }
+
+    # Showcase the current configuration
+    print_info "The current configuration is:"
+    echo ""
+    print_info "ROS_DOMAIN_ID: $ROS_DOMAIN_ID"
+    print_info "ROBOT_PROFILE: $ROBOT_PROFILE"
+    print_info "ROAST_LOGLEVEL: $ROAST_LOGLEVEL"
+    print_info "RMW_IMPLEMENTATION: $RMW_IMPLEMENTATION"
+    print_info "ROBOT_IP: $ROBOT_IP"
+    print_info "ROBOT_USERNAME: $ROBOT_USERNAME"
+    sleep 1
+}
+
+function host {
+    export ROS_DOMAIN_ID=15 # Host
+    export ROBOT_PROFILE="HOST"
+    export ROBOT_IP=$HOST_IP
+    export ROBOT_USERNAME=$HOST_USERNAME
+    print_information
+
+    #if the first argument is with -r flag, then run the command on the remote host
+    if [ "$1" == "-r" ]; then
+        shift
+        sshpass -p "$HOST_PASSWORD" ssh "$ROBOT_USERNAME"@"$ROBOT_IP"
+        return
+    fi
+}
+
+function beast {
+    export ROS_DOMAIN_ID=13 # Beast
+    export ROBOT_PROFILE="BEAST"
+    export ROBOT_IP=$BEAST_IP
+    export ROBOT_USERNAME=$BEAST_USERNAME
+    print_information
+
+    #if the first argument is with -r flag, then run the command on the remote host
+    if [ "$1" == "-r" ]; then
+        shift
+        sshpass -p "$BEAST_PASSWORD" ssh "$ROBOT_USERNAME"@"$ROBOT_IP"
+        return
+    fi
+}
+
+function saurus {
+    export ROS_DOMAIN_ID=21 # saurus
+    export ROBOT_PROFILE="SAURUS"
+    export ROBOT_IP=$SAURUS_IP
+    export ROBOT_USERNAME=$SAURUS_USERNAME
+    print_information
+
+    #if the first argument is with -r flag, then run the command on the remote host
+    if [ "$1" == "-r" ]; then
+        shift
+        sshpass -p "$SAURUS_PASSWORD" ssh "$ROBOT_USERNAME"@"$ROBOT_IP"
+        return
+    fi
+}
+
+function mini-robot {
+    export ROS_DOMAIN_ID=33 # mini-robot
+    export ROBOT_PROFILE="MINI_ROBOT"
+    export ROBOT_IP=$MINI_ROBOT_IP
+    export ROBOT_USERNAME=$MINI_ROBOT_USERNAME
+    print_information
+
+    #if the first argument is with -r flag, then run the command on the remote host
+    if [ "$1" == "-r" ]; then
+        shift
+        sshpass -p "$MINI_ROBOT_PASSWORD" ssh "$ROBOT_USERNAME"@"$ROBOT_IP"
+        return
+    fi
+}
+
+function leuko {
+    export ROS_DOMAIN_ID=3 # Leuko
+    export ROBOT_PROFILE="LEUKO"
+    export ROBOT_IP=$LEUKO_IP
+    export ROBOT_USERNAME=$LEUKO_USERNAME
+    print_information
+
+    #if the first argument is with -r flag, then run the command on the remote host
+    if [ "$1" == "-r" ]; then
+        shift
+        sshpass -p "$LEUKO_PASSWORD" ssh "$ROBOT_USERNAME"@"$ROBOT_IP"
+        return
+    fi
+}

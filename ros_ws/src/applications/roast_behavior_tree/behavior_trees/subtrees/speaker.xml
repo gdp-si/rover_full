@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<root>
+    <!-- Wait action should match the length of the audio -->
+    <BehaviorTree ID="SpeakerTestBed">
+        <Sequence name="SpeakerChecker">
+            <Action ID="SpeakerAnnouncement" message="bootup" frequency="1" />
+            <Action ID="WaitAction" wait_duration="3.0" />
+
+            <Action ID="SpeakerAnnouncement" message="threat-track" frequency="1" />
+            <Action ID="WaitAction" wait_duration="8.0" />
+
+            <Action ID="SpeakerAnnouncement" message="warn-threat" frequency="1" />
+            <Action ID="WaitAction" wait_duration="6.0" />
+
+            <Action ID="SpeakerAnnouncement" message="patrol" frequency="1" />
+            <Action ID="WaitAction" wait_duration="3.0" />
+
+            <Action ID="SpeakerAnnouncement" message="threat-track" frequency="3" />
+            <Action ID="WaitAction" wait_duration="24.0" />
+
+        </Sequence>
+    </BehaviorTree>
+</root>

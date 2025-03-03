@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>roast_behavior_tree</name>
+  <version>0.0.0</version>
+  <description>The package contains utilities, plugins and behavior trees for the roast robot</description>
+  <maintainer email="franklinselva10@gmail.com">Selvakumar.H-S</maintainer>
+  <license>GPT3</license>
+
+  <buildtool_depend>ament_cmake_ros</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>nav2_msgs</depend>
+  <depend>behaviortree_cpp_v3</depend>
+  <depend>roast_services</depend>
+  <depend>roast_navigation</depend>
+  <depend>roast_actions</depend>
+  <depend>roast_threat_tracking</depend>
+  <depend>roast_patrolling</depend>
+  <depend>cv_bridge</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

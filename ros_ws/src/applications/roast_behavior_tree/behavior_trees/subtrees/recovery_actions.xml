@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<root>
+    <BehaviorTree ID="RecoveryActionsSubTree">
+        <Sequence name="RecoveryActions">
+            <Action ID="SpinAction" spin_angle="3.14"/>
+            <Action ID="WaitAction" wait_duration="5.0"/>
+            <Action ID="BackUpAction" backup_distance="0.5" speed="1.0"/>
+        </Sequence>
+    </BehaviorTree>
+</root>
