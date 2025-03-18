@@ -1,0 +1,15 @@
+/home/rover/demo_ws/install/dorobots_msgs/share/ament_index/resource_index/package_run_dependencies/dorobots_msgs
+/home/rover/demo_ws/install/dorobots_msgs/share/ament_index/resource_index/parent_prefix_path/dorobots_msgs
+/home/rover/demo_ws/install/dorobots_msgs/share/dorobots_msgs/environment/ament_prefix_path.sh
+/home/rover/demo_ws/install/dorobots_msgs/share/dorobots_msgs/environment/ament_prefix_path.dsv
+/home/rover/demo_ws/install/dorobots_msgs/share/dorobots_msgs/environment/path.sh
+/home/rover/demo_ws/install/dorobots_msgs/share/dorobots_msgs/environment/path.dsv
+/home/rover/demo_ws/install/dorobots_msgs/share/dorobots_msgs/local_setup.bash
+/home/rover/demo_ws/install/dorobots_msgs/share/dorobots_msgs/local_setup.sh
+/home/rover/demo_ws/install/dorobots_msgs/share/dorobots_msgs/local_setup.zsh
+/home/rover/demo_ws/install/dorobots_msgs/share/dorobots_msgs/local_setup.dsv
+/home/rover/demo_ws/install/dorobots_msgs/share/dorobots_msgs/package.dsv
+/home/rover/demo_ws/install/dorobots_msgs/share/ament_index/resource_index/packages/dorobots_msgs
+/home/rover/demo_ws/install/dorobots_msgs/share/dorobots_msgs/cmake/dorobots_msgsConfig.cmake
+/home/rover/demo_ws/install/dorobots_msgs/share/dorobots_msgs/cmake/dorobots_msgsConfig-version.cmake
+/home/rover/demo_ws/install/dorobots_msgs/share/dorobots_msgs/package.xml

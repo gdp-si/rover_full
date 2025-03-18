@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-22ff74355f67de6373bc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "robot_pose_publisher_ros2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_pose_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_pose_publisher-783ab878abc7e4f9925a.json",
+					"name" : "robot_pose_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_pose_publisher_ros2_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_pose_publisher_ros2_uninstall-2b0cae74b91f43cd8f59.json",
+					"name" : "robot_pose_publisher_ros2_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-fac57b0442a64e3ec720.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rover/demo_ws/build/robot_pose_publisher_ros2",
+		"source" : "/home/rover/demo_ws/src/robot_pose_publisher_ros2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

@@ -1,0 +1,4 @@
+source;share/dorobots_msgs/local_setup.bash
+source;share/dorobots_msgs/local_setup.dsv
+source;share/dorobots_msgs/local_setup.sh
+source;share/dorobots_msgs/local_setup.zsh

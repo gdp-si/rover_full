@@ -1,0 +1,44 @@
+running egg_info
+creating ../../build/demo_app/demo_app.egg-info
+writing ../../build/demo_app/demo_app.egg-info/PKG-INFO
+writing dependency_links to ../../build/demo_app/demo_app.egg-info/dependency_links.txt
+writing entry points to ../../build/demo_app/demo_app.egg-info/entry_points.txt
+writing requirements to ../../build/demo_app/demo_app.egg-info/requires.txt
+writing top-level names to ../../build/demo_app/demo_app.egg-info/top_level.txt
+writing manifest file '../../build/demo_app/demo_app.egg-info/SOURCES.txt'
+reading manifest file '../../build/demo_app/demo_app.egg-info/SOURCES.txt'
+writing manifest file '../../build/demo_app/demo_app.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/rover/demo_ws/build/demo_app/build
+creating /home/rover/demo_ws/build/demo_app/build/lib
+creating /home/rover/demo_ws/build/demo_app/build/lib/demo_app
+copying demo_app/demo_app_node.py -> /home/rover/demo_ws/build/demo_app/build/lib/demo_app
+copying demo_app/__init__.py -> /home/rover/demo_ws/build/demo_app/build/lib/demo_app
+copying demo_app/waypoint_saver.py -> /home/rover/demo_ws/build/demo_app/build/lib/demo_app
+copying demo_app/mission_planner.py -> /home/rover/demo_ws/build/demo_app/build/lib/demo_app
+running install
+running install_lib
+creating /home/rover/demo_ws/install/demo_app/lib/python3.10/site-packages/demo_app
+copying /home/rover/demo_ws/build/demo_app/build/lib/demo_app/demo_app_node.py -> /home/rover/demo_ws/install/demo_app/lib/python3.10/site-packages/demo_app
+copying /home/rover/demo_ws/build/demo_app/build/lib/demo_app/__init__.py -> /home/rover/demo_ws/install/demo_app/lib/python3.10/site-packages/demo_app
+copying /home/rover/demo_ws/build/demo_app/build/lib/demo_app/waypoint_saver.py -> /home/rover/demo_ws/install/demo_app/lib/python3.10/site-packages/demo_app
+copying /home/rover/demo_ws/build/demo_app/build/lib/demo_app/mission_planner.py -> /home/rover/demo_ws/install/demo_app/lib/python3.10/site-packages/demo_app
+byte-compiling /home/rover/demo_ws/install/demo_app/lib/python3.10/site-packages/demo_app/demo_app_node.py to demo_app_node.cpython-310.pyc
+byte-compiling /home/rover/demo_ws/install/demo_app/lib/python3.10/site-packages/demo_app/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/rover/demo_ws/install/demo_app/lib/python3.10/site-packages/demo_app/waypoint_saver.py to waypoint_saver.cpython-310.pyc
+byte-compiling /home/rover/demo_ws/install/demo_app/lib/python3.10/site-packages/demo_app/mission_planner.py to mission_planner.cpython-310.pyc
+running install_data
+creating /home/rover/demo_ws/install/demo_app/share/ament_index
+creating /home/rover/demo_ws/install/demo_app/share/ament_index/resource_index
+creating /home/rover/demo_ws/install/demo_app/share/ament_index/resource_index/packages
+copying resource/demo_app -> /home/rover/demo_ws/install/demo_app/share/ament_index/resource_index/packages
+copying package.xml -> /home/rover/demo_ws/install/demo_app/share/demo_app
+copying launch/save_waypoint.launch.py -> /home/rover/demo_ws/install/demo_app/share/demo_app
+running install_egg_info
+Copying ../../build/demo_app/demo_app.egg-info to /home/rover/demo_ws/install/demo_app/lib/python3.10/site-packages/demo_app-0.0.0-py3.10.egg-info
+running install_scripts
+Installing demo_app_node script to /home/rover/demo_ws/install/demo_app/lib/demo_app
+Installing mission_planner script to /home/rover/demo_ws/install/demo_app/lib/demo_app
+Installing waypoint_saver script to /home/rover/demo_ws/install/demo_app/lib/demo_app
+writing list of installed files to '/home/rover/demo_ws/build/demo_app/install.log'

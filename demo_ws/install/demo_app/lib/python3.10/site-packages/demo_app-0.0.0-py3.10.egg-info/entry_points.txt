@@ -1,0 +1,5 @@
+[console_scripts]
+demo_app_node = demo_app.demo_app_node:main
+mission_planner = demo_app.mission_planner:main
+waypoint_saver = demo_app.waypoint_saver:main
+
